@@ -31,7 +31,7 @@ public class CrudController {
     }
 
     @GetMapping("/persons/by-name-surname")
-    public Optional<List<Person>> getPersonsByNameAndSurname(@RequestParam String name, @RequestParam String surname) {
+    public Person getPersonsByNameAndSurname(@RequestParam String name, @RequestParam String surname) {
         return crudService.getPersonsByNameAndSurname(name, surname);
     }
 }

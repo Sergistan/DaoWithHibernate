@@ -26,7 +26,11 @@ public class CrudService {
         return crudPersonRepository.findPersonByAgeLessThanOrderByAgeAsc(age);
     }
 
-    public Optional<List<Person>> getPersonsByNameAndSurname(String name, String surname) {
-        return crudPersonRepository.findPersonByNameIgnoreCaseAndSurnameIgnoreCase(name,surname);
+    public Person getPersonsByNameAndSurname(String name, String surname) throws RuntimeException {
+        Optional<Person> listPersons = crudPersonRepository.findPersonByNameIgnoreCaseAndSurnameIgnoreCase(name, surname);
+        if (listPersons.isEmpty()) {
+            throw new RuntimeException("User not found!");
+        }
+        return listPersons.get();
     }
 }

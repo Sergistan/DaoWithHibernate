@@ -13,5 +13,5 @@ public interface CrudPersonRepository extends JpaRepository<Person, Integer> {
 
     List<Person> findPersonByAgeLessThanOrderByAgeAsc(int age);
 
-    Optional<List<Person>> findPersonByNameIgnoreCaseAndSurnameIgnoreCase(String name, String surname);
+    Optional<Person> findPersonByNameIgnoreCaseAndSurnameIgnoreCase(String name, String surname);
 }
