@@ -6,3 +6,5 @@ insert into persons
 values ('Maria', 'Som', 34, '8(543)123-56-78','Kazan');
 insert into persons
 values ('Olga', 'Sidorova', 26,'8(932)987-43-32','Novgorod');
+insert into persons
+values ('Andrey', 'Vasiliev', 55,'8(932)987-45-32','Kazan');
