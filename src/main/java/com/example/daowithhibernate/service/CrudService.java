@@ -33,4 +33,9 @@ public class CrudService {
         }
         return listPersons.get();
     }
+
+    public List<Person> findAll() {
+        return crudPersonRepository.findAll();
+    }
+
 }
