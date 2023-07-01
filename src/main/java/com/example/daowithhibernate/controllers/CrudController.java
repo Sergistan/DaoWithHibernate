@@ -43,8 +43,8 @@ public class CrudController {
     }
 
     @GetMapping("/find-all")
-    @PreAuthorize("authentication.principal.username == 'Sergey'")
-    public List<Person> findAll() {
+    @PreAuthorize("#username == authentication.principal.username")
+    public List<Person> findAll(@RequestParam String username) {
         return crudService.findAll();
     }
 }
